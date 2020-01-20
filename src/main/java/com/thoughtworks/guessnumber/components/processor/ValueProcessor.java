@@ -15,9 +15,6 @@ public class ValueProcessor extends Processor {
 
         context.getResult().setValueCorrectCount(context.getCorrectValues().size());
 
-        if(context.getCorrectValues().size() > 0)
-        {
-            super.process(context);
-        }
+        super.process(context);
     }
 }

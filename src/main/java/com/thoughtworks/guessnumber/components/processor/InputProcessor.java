@@ -11,7 +11,7 @@ public class InputProcessor extends Processor {
     {
         tips();
 
-        String inputString = ReadInput();
+        String inputString = readInput();
 
         Stream.of(inputString.split(",")).forEach(number -> context.getInput().add(Integer.valueOf(number)));
 
@@ -23,7 +23,7 @@ public class InputProcessor extends Processor {
         System.out.println("Please input the 4 numbers you guessed with SPACE and type ENTER finish:");
     }
 
-    private String ReadInput()
+    private String readInput()
     {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
