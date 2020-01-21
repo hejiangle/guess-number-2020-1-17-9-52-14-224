@@ -15,7 +15,9 @@ public class PositionProcessor extends Processor {
                 .filter(value -> expected.indexOf(value) == input.indexOf(value))
                 .forEach(value -> context.getCorrectPositions().add(value));
 
+        context.getCorrectPositions().forEach(correctValues::remove);
         context.getResult().setPositionCorrectCount(context.getCorrectPositions().size());
+        context.getResult().setValueCorrectCount(correctValues.size());
 
         super.process(context);
     }
